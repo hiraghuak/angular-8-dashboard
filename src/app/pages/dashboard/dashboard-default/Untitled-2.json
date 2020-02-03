@@ -1,0 +1,60 @@
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "events": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 50,
+      "buckets": [{
+          "key": "India",
+          "doc_count": 189057,
+          "total_event_value": {
+            "value": 189057.0
+          }
+        },
+        {
+          "key": "United States",
+          "doc_count": 1871,
+          "total_event_value": {
+            "value": 1871.0
+          }
+        },
+        {
+          "key": "Bangladesh",
+          "doc_count": 306,
+          "total_event_value": {
+            "value": 306.0
+          }
+        },
+        {
+          "key": "Mauritius",
+          "doc_count": 42,
+          "total_event_value": {
+            "value": 42.0
+          }
+        },
+        {
+          "key": "Pakistan",
+          "doc_count": 18,
+          "total_event_value": {
+            "value": 18.0
+          }
+        }
+      ]
+    }
+  }
+}

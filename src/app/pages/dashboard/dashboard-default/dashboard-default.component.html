@@ -1,0 +1,263 @@
+<div class="row">
+
+  <!-- card4 start -->
+  <div class="col-md-6 col-xl-3">
+    <div class="card card-yellow total-card">
+      <div class="card-block">
+        <div class="text-left">
+          <h4>{{BPlayValue}}</h4>
+          <p class="m-0">Play</p>
+        </div>
+      </div>
+      <chart [type]="'line'" [data]="totalValueGraphData4" [options]="totalValueGraphOption"
+        style="width: 100%; height: 100px;"></chart>
+    </div>
+  </div>
+  <!-- card4 end -->
+
+  <!-- card1 start -->
+  <div class="col-md-6 col-xl-3">
+    <div class="card card-blue total-card">
+      <div class="card-block">
+        <div class="text-left">
+          <h4>{{PlayComplete}}</h4>
+          <p class="m-0">Play Complete</p>
+        </div>
+      </div>
+      <chart [type]="'line'" [data]="totalValueGraphData1" [options]="totalValueGraphOption"
+        style="width: 100%; height: 100px;"></chart>
+    </div>
+  </div>
+  <!-- card1 end -->
+
+  <!-- card3 start -->
+  <div class="col-md-6 col-xl-3">
+    <div class="card card-green total-card">
+      <div class="card-block">
+        <div class="text-left">
+          <h4>{{BPlaybackTimeValue}}</h4>
+          <p class="m-0">Playback Time</p>
+        </div>
+      </div>
+      <chart [type]="'line'" [data]="totalValueGraphData3" [options]="totalValueGraphOption"
+        style="width: 100%; height: 100px;"></chart>
+    </div>
+  </div>
+  <!-- card3 end -->
+
+  <!-- card2 start -->
+  <div class="col-md-6 col-xl-3">
+    <div class="card card-pink total-card">
+      <div class="card-block">
+        <div class="text-left">
+          <h4>{{BBufferTimeValue}}</h4>
+          <p class="m-0">Buffer Time</p>
+        </div>
+      </div>
+      <chart [type]="'line'" [data]="totalValueGraphData2" [options]="totalValueGraphOption"
+        style="width: 100%; height: 100px;"></chart>
+    </div>
+  </div>
+  <!-- card2 end -->
+
+  <!-- Sales Statestics Start -->
+  <div class="col-md-12">
+    <div class="card sales-menu-card bg-dark">
+      <div class="card-header ">
+        <div class="card-header-left ">
+          <h5>Plays and Completion</h5>
+        </div>
+        <div class="card-header-right">
+          <i class="icofont icofont-spinner-alt-5"></i>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <div class="row valign-wrapper">
+          <div class="col-sm-9">
+            <div id="area-custom" style="height:300px;"></div>
+          </div>
+          <div class="col-sm-3">
+            <i class="icofont icofont-ui-video-play text-c-blue f-40 sales-icon m-r-20"></i>
+            <div class="sales-contain d-inline-block">
+              <h2 class="f-w-600">{{APlayGraphic6}}</h2>
+              <p class="f-w-600 text-muted f-16">Total Plays</p>
+            </div>
+          </div>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col-sm-9">
+            <div id="area-custom-2" style="height:300px;"></div>
+          </div>
+          <div class="col-sm-3">
+            <i class="icofont icofont-ui-video text-c-pink f-40 sales-icon m-r-20"></i>
+            <div class="sales-contain d-inline-block">
+              <h2 class="f-w-600">{{BPlayGraphic6}}</h2>
+              <p class="f-w-600 text-muted f-16">Total Completion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sales Statestics End -->
+
+  <!-- Serve & Plan Start -->
+  <div class="col-md-12 col-xl-8">
+    <app-card [title]="'Play Time'" [cardClass]="'serve-card bg-dark'">
+      <div class="serve-text d-inline-block p-b-10">
+        <h2 class="d-inline-block m-r-15 f-w-600">{{playBackWeekWiseI}}</h2>
+        <i class="icofont icofont-caret-down text-c-green f-20 "></i>
+      </div>
+      <div class="serve-text f-right">
+        <h4 class="d-inline-block m-r-15 f-18 text-muted">Week</h4>
+        <i class="icofont icofont-caret-down text-c-green f-20 "></i>
+      </div>
+      <h4 class="text-muted">Total Play Time</h4>
+      <div class="row serve-chart-list">
+        <div class="col-sm-4">
+          <h6 class="p-b-10">Increase</h6>
+          <h6>Decrease</h6>
+        </div>
+        <div class="col-sm-8">
+          <div id="Servey-chart" style="height:210px;width:100%"></div>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  <!-- Serve & Plan End -->
+
+  <!-- Contact Menu Start -->
+  <div class="col-md-12 col-xl-4">
+    <app-card [title]="'Buffering Time'" [cardClass]="'invite-card bg-blackcard'" [blockClass]="'text-center'">
+      <div class="invite-card-chart">
+        <div id="solid-gauge1" style="height:260px;"></div>
+        <div class="invite-card-cont">
+          <i class="icofont icofont-paper-plane text-c-green"></i>
+          <span class="f-50">391</span>
+          <hr>
+        </div>
+      </div>
+      <h6 class="f-w-600">Total Buffering Time</h6>
+      <!-- <p class="text-muted m-b-0">You are close to your 528 invites goal</p> -->
+    </app-card>
+  </div>
+  <!-- Contact Menu End -->
+
+
+  <!-- Project & Task Start -->
+  <div class="col-md-12 col-xl-6 ">
+    <app-card [title]="'Play by category'" [cardClass]="'project-task bg-blackcard projectText'"
+      [blockClass]="'p-b-10'">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Plays</th>
+            </tr>
+          </thead>
+          <tbody>
+            <table>
+              <ng-container *ngFor="let playCategory of PlaybyCategoryA | slice:0:5">
+                <tr>
+                  <td>
+                    <div class="task-contain">
+                      <h6 class="bg-c-blue d-inline-block text-center">{{playCategory.key | slice:0:2 | uppercase}}</h6>
+                      <p class="d-inline-block m-l-20">{{playCategory.key}}</p>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="d-inline-block m-r-20">{{playCategory.total_event_value.value}}</p>
+                    <div class="progress d-inline-block">
+                      <div class="progress-bar bg-c-blue" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                        style="width:80%">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </ng-container>
+            </table>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+
+  <!-- Project & Task Start -->
+  <div class="col-md-12 col-xl-6 ">
+    <app-card [title]="'Play by Genres'" [cardClass]="'project-task bg-blackcard projectText'" [blockClass]="'p-b-10'">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Genres</th>
+              <th>Plays</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let playCategory of PlaybyGenresA | slice:0:5">
+              <tr>
+                <td>
+                  <div class="task-contain">
+                    <h6 class="bg-c-blue d-inline-block text-center">{{playCategory.key | slice:0:2 | uppercase}}</h6>
+                    <p class="d-inline-block m-l-20">{{playCategory.key}}</p>
+                  </div>
+                </td>
+                <td>
+                  <p class="d-inline-block m-r-20">{{playCategory.total_event_value.value}}</p>
+                  <div class="progress d-inline-block">
+                    <div class="progress-bar bg-c-blue" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                      style="width:80%">
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </app-card>
+  </div>
+
+  <!-- Map stat -->
+  <div class="row no-gutters dashMap">
+    <div class="col-md-8 col-xl-8">
+      <app-card [title]="'Video Views by Country'" [cardClass]="'unique-visitor-card o-hidden bg-blackcard'"
+        [blockClass]="'p-0'">
+        <div class="card-block-small">
+          <div id="world-map-visitors" style="width:100%;height:365px;"></div>
+        </div>
+      </app-card>
+    </div>
+    <div class="col-md-4 col-xl-4">
+
+      <app-card [title]="'Top 5 Countries Video Views'" [cardClass]="'project-task bg-blackcard projectText'"
+        [blockClass]="'p-b-10'">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <tbody>
+              <ng-container *ngFor="let Top5CountriesVideoViews of Top5CountriesVideoViewsA">
+                <tr>
+                  <td>
+                    <div class="task-contain">
+                      <h6 class="bg-c-blue d-inline-block text-center">
+                        {{Top5CountriesVideoViews.key | slice:0:1 | uppercase}}</h6>
+                      <p class="d-inline-block m-l-20">{{Top5CountriesVideoViews.key}}</p>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="d-inline-block m-r-20">{{Top5CountriesVideoViews.total_event_value.value}} M</p>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+        </div>
+      </app-card>
+
+    </div>
+  </div>
+  <!-- Map end -->
+
+</div>
